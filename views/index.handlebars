@@ -10,11 +10,13 @@
     <div class="col-6">
       <div class="card">
         <h5 class="card-header">Burgers Ready To Be Devoured!</h5>
-        <ul>
+        <ul class="list-group">
 
           {{#each burgers}}
           {{#unless devoured}}
+
           {{> burgers/burger-block devoured=true}}
+
           {{/unless}}
           {{/each}}
 
@@ -28,7 +30,7 @@
     <div class="col-6">
       <div class="card">
         <h5 class="card-header">Already Devoured Burgers!</h5>
-        <ul>
+        <ul class="list-group">
           {{#each burgers}}
           {{#if devoured}}
           {{> burgers/burger-block  devoured=false}}
