@@ -3,13 +3,13 @@
 </nav>
 <main class="container">
 
-  <img src="../public/assets/PixelArtBurger.png" alt="pixelArtBurger">
+  <img src="assets/PixelArtBurger.png" alt="pixelArtBurger" />
 
   <div class="row justify-content-center">
 
     <div class="col-6">
       <div class="card">
-        <h5 class="card-header">Burgers that are not eaten!</h5>
+        <h5 class="card-header">Burgers Ready To Be Devoured!</h5>
         <ul>
 
           {{#each burgers}}
@@ -27,7 +27,7 @@
 
     <div class="col-6">
       <div class="card">
-        <h5 class="card-header">Burgers that are eaten!</h5>
+        <h5 class="card-header">Already Devoured Burgers!</h5>
         <ul>
           {{#each burgers}}
           {{#if devoured}}
@@ -58,18 +58,18 @@
               <div class="form-check-inline">
                 <input class="form-check-input" type="radio" name="devoured" value="1" checked>
                 <label class="form-check-label" for="devoured">
-                  Eaten!
+                  Already Devoured!
                 </label>
               </div>
               <div class="form-check-inline">
                 <input class="form-check-input" type="radio" name="devoured" value="0" checked>
                 <label class="form-check-label" for="devoured">
-                  Not Eaten!
+                  Not Devoured!
                 </label>
               </div>
             </div>
 
-            <button class="btn btn-danger btn-sm" type="submit">Add Your Burger!</button>
+            <button class="btn btn-success btn-sm" type="submit">Add Your Burger!</button>
         </form>
       </div>
     </div>
