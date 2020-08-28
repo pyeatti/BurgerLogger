@@ -1,0 +1,38 @@
+#header {
+  text-align: center;
+}
+
+li {
+  padding-top: 5px;
+  font-size: 1.2rem;
+  list-style: none;
+}
+
+.card {
+  margin-top: 20px;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+/* .card-header {
+  text-align: center;
+} */
+
+.label {
+  font-weight: bold;
+}
+
+.create-update-form {
+  padding: 5px;
+  margin: 5px;
+  background: aqua;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}

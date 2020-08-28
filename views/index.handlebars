@@ -1,0 +1,77 @@
+<nav class="navbar navbar-light bg-light justify-content-center">
+  <h1>EAT DA BURGER!</h1>
+</nav>
+<main class="container">
+
+  <img src="assets/PixelArtBurger.png" alt="pixelArtBurger" />
+
+  <div class="row justify-content-center">
+
+    <div class="col-6">
+      <div class="card">
+        <h5 class="card-header">Burgers Ready To Be Devoured!</h5>
+        <ul>
+
+          {{#each burgers}}
+          {{#unless devoured}}
+          {{> burgers/burger-block devoured=true}}
+          {{/unless}}
+          {{/each}}
+
+        </ul>
+      </div>
+    </div>
+
+
+
+
+    <div class="col-6">
+      <div class="card">
+        <h5 class="card-header">Already Devoured Burgers!</h5>
+        <ul>
+          {{#each burgers}}
+          {{#if devoured}}
+          {{> burgers/burger-block  devoured=false}}
+          {{/if}}
+          {{/each}}
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-4">
+      <div class="card">
+        <form class="create-form">
+
+          <h5 class="card-header">Create Your Own Burger!</h5>
+          <div class="card-body">
+            <div class="form-group">
+              <label for="burg">Burger Name:</label>
+              <input type="text" id="burg" name="name">
+            </div>
+
+
+            <div class="form-group">
+              <label for="devoured">Has this burger been eaten?</label><br>
+              <div class="form-check-inline">
+                <input class="form-check-input" type="radio" name="devoured" value="1" checked>
+                <label class="form-check-label" for="devoured">
+                  Already Devoured!
+                </label>
+              </div>
+              <div class="form-check-inline">
+                <input class="form-check-input" type="radio" name="devoured" value="0" checked>
+                <label class="form-check-label" for="devoured">
+                  Not Devoured!
+                </label>
+              </div>
+            </div>
+
+            <button class="btn btn-success btn-sm" type="submit">Add Your Burger!</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
